@@ -1,0 +1,8 @@
+   94  git init
+   96  git add 2019-july/
+   97  git commit -m "First commit"
+   98  git remote add origin git@github.com:gailg/javascriptAndOtherCodingAdventures.git
+   99  git remote -v
+  100  git push origin master
+  116  git branch --set-upstream-to=origin/master master
+  117  git pull

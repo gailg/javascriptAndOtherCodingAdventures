@@ -149,7 +149,7 @@ console.log("-----averageDead:");
 console.log(averageDead);
 
 // strings and character codes
-function charaacterScript(code) {
+function characterScript(code) {
   for (let script of SCRIPTS) {
     if (script.ranges.some(
       ([from, to]) => {
@@ -160,8 +160,8 @@ function charaacterScript(code) {
     }
   }
 }
-console.log("-----charaacterScript(121):");
-console.log(charaacterScript(121));
+console.log("-----characterScript(121):");
+console.log(characterScript(121));
 
 
 let horseShoe = "🐴👟";
@@ -197,3 +197,14 @@ let items = [1, 2, 3, 4, 5];
 let counts = [];
 let item = items[0];
 let groupName = (n => n > 2);
+let name = groupName(item);
+let known = counts.findIndex(c => c.name == name);
+console.log("countBy(items, groupName)");
+console.log(countBy(items, groupName));
+let text = '英国的狗说"woof", 俄罗斯的狗说"тяв"';
+
+
+  // let scripts = countBy(text, char => {
+  //   let script = characterScript(char.codePointAt(0));
+  //   return script ? script.name : "none";
+  // }).filter( ({name}) => != "none");
