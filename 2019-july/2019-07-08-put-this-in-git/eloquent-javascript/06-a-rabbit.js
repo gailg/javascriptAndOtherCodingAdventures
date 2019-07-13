@@ -124,6 +124,7 @@ console.log("-----roseDragonIterator.next()");
 console.log(roseDragonIterator.next());
 console.log("-----roseDragonIterator.next()");
 console.log(roseDragonIterator.next());
+console.log("---------------------------------------------------MatrixIterator");
 class Matrix {
   constructor(width, height, element = (x, y) => undefined) {
     this.width = width;
@@ -142,7 +143,6 @@ class Matrix {
     this.content[y * this.width + x] = value;
   }
 }
-
 class MatrixIterator {
   constructor(matrix) {
     this.x = 0;
@@ -162,12 +162,104 @@ class MatrixIterator {
     return {value, done: false};
   }
 }
-
 Matrix.prototype[Symbol.iterator] = function() {
   return new MatrixIterator(this);
 }
-
 let matrix = new Matrix(2, 2, (x, y) => `value ${x},${y}`);
 for (let {x, y, value} of matrix) {
   console.log(x, y, value);
 }
+console.log("----------------------------------- getters, setters, and statics");
+let varyingSize = {
+  get size() {
+    return Math.floor(Math.random() * 100);
+  }
+}
+console.log("-----varyingSize.size");
+console.log(varyingSize.size);
+console.log("-----varyingSize.size");
+console.log(varyingSize.size);
+
+class WhyNotThis{
+  constructor(){
+    this.size = Math.floor(Math.random() * 100);
+  }
+}
+let whyNotThis = new WhyNotThis();
+console.log("-----whyNotThis.size");
+console.log(whyNotThis.size);
+whyNotThis = new WhyNotThis();
+console.log("-----whyNotThis.size");
+console.log(whyNotThis.size);
+
+console.log("------------------------------------------------------Temperature");
+class Temperature {
+  constructor(celsius) {
+    this.celsius = celsius;
+  }
+  get fahrenheit() {
+    return this.celsius * 1.8 + 32;
+  }
+  set fahrenheit(value) {
+    this.celsius = (value - 32) / 1.8;
+  }
+  static fromFaharenheit(value) {
+    return new Temperature((value - 32) / 1.8);
+  }
+}
+let temperature = new Temperature(22);
+console.log("-----temperature.fahrenheit");
+console.log(temperature.fahrenheit);
+console.log(temperature.celsius);
+temperature.celsius = 30;
+console.log("-----temperature.celsius = 30");
+console.log("-----temperature.fahrenheit");
+console.log(temperature.fahrenheit);
+console.log("-----Temperature.fromFaharenheit(80);")
+console.log(Temperature.fromFaharenheit(80));
+
+
+
+
+
+function arrayToList(larry){
+  if(larry.length == 0){
+    return null;
+  } else {
+    return {apple: larry.shift(), bowl: arrayToList(larry)}
+  }
+}
+
+
+function listToArray(monty, array = []){
+  array.push(monty.apple);
+  if (monty.bowl === null){
+    return array;
+  } else {
+    return listToArray(monty.bowl, array);
+  }
+}
+monty = arrayToList([1, 2, 3, 4, 5, 6]);
+console.log("monty");
+console.log(monty);
+charles = listToArray(monty);
+console.log("charles");
+console.log(charles);
+
+console.log("------------------------------------------------------inheritance");
+class SymmetricMatrix extends Matrix {
+  constructor(size, element = (x, y) => undefined) {
+    super(size, size, (x, y) => {
+      if (x < y) return element(y, x);
+      else return element(x, y);
+    });
+  }
+  set(x, y, value) {
+    super.set(x, y, value);
+    if (x != y) {
+      super.set(y, x, value);
+    }
+  }
+}
+let symmetricMatrix = new SymmetricMatrix(5, (x, y) => `${x}, ${y}`);
+console.log(symmetricMatrix.get(2, 3));
