@@ -95,7 +95,22 @@ function findRoute(graph, from, to) {
     }
   }
 }
-function packageOrientedRobot({location, parcels}, route) {
+function goalOrientedRobot({location, parcels}, route) {
+  if (route.length == 0) {
+    let parcel = parcels[0];
+    if (parcel.location != location) {
+      route = findRoute(roadGraph, location, parcel.location);
+      console.log("---------- parcel.location != location ---------- route:");
+      console.log(route);
+    } else {
+      route = findRoute(roadGraph, location, parcel.address)
+      console.log("---------- parcel.location == location ---------- route:");
+      console.log(route);
+    }
+  }
+  return {direction: route[0], memory: route.slice(1)}
+}
+function shortestRouteRobot({location, parcels}, route) {
   if (route.length == 0) {
     let routes = [];
     for (let parcel of parcels){
@@ -120,20 +135,18 @@ function packageOrientedRobot({location, parcels}, route) {
   return {direction: route[0], memory: route.slice(1)}
 }
 function runRobot(state, robot, memory) {
-  for (let turn = 0; turn < 20; turn++){
+  for (let turn = 0; ; turn++){
     if (state.parcels.length == 0) {
-      console.log(`Finished in ${turn} turns`);
-      break;
+      // console.log(`Finished in ${turn} turns`);
+      // break;
+      return turn;
     }
     let action = robot(state, memory);
     state = state.move(action. direction);
     memory = action.memory;
-
     console.log(`${action.direction}: `);
   }
 }
-// let villageState = VillageState.random(2);
-
 function testParcels(){
   let parcels = [];
   let location = universe[6];
@@ -145,15 +158,26 @@ function testParcels(){
   location = universe[4];
   address = universe[6];
   parcels.push({id: 2, location, address});
+  location = universe[3];
+  address = universe[7];
+  parcels.push({id: 2, location, address});
   return parcels;
 }
-let parcels = testParcels();
+// let parcels = testParcels();
 // let villageState = new VillageState("Pap", parcels);
-["0:Eli-Sam", "1:Amy-Dan", "2:Tom-Eli", "3:Pap-Sam", "4:Cat-God"]
-let villageState = new VillageState.random()
-console.log("-----------------------------------------------------------------------------villageState");
-console.log(villageState);
-console.log("----------------------------------------------------------------------------------parcels");
-console.log(villageState.prettyParcels);
-console.log(villageState.parcels);
-runRobot(villageState, packageOrientedRobot, []);
+// ["0:Eli-Sam", "1:Amy-Dan", "2:Tom-Eli", "3:Pap-Sam", "4:Cat-God"]
+let shortestRoute = [];
+let goalOriented = [];
+for (let i = 0; i < 100; i++){
+  let villageState = new VillageState.random()
+  console.log("-----------------------------------------------------------------------------villageState");
+  console.log(villageState);
+  console.log("----------------------------------------------------------------------------------parcels");
+  console.log(villageState.prettyParcels);
+  shortestRoute.push(runRobot(villageState, shortestRouteRobot, []));
+  goalOriented.push(runRobot(villageState, goalOrientedRobot, []));
+};
+console.log("-----shortestRoute");
+console.log(shortestRoute, shortestRoute.reduce((x1, x2) => x1 + x2) / shortestRoute.length);
+console.log("-----goalOriented");
+console.log(goalOriented, goalOriented.reduce((x1, x2) => x1 + x2) / goalOriented.length);
