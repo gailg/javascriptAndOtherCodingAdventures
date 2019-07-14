@@ -1,3 +1,4 @@
+"use strict";
 const roads = [
   "Alice-Bob",
   "Alice-Cabin",
@@ -14,7 +15,6 @@ const roads = [
   "Marketplace-TownHall",
   "Shop-TownHall"
 ];
-
 function buildGraph(edges) {
   let graph = Object.create(null);
   function addEdge(from, to) {
@@ -33,7 +33,6 @@ function buildGraph(edges) {
 const roadGraph = buildGraph(roads);
 console.log("-------------------------------------------------------roadGraph");
 console.log(roadGraph);
-
 class VillageState {
   constructor(location, parcels) {
     this.location = location;
@@ -45,9 +44,7 @@ class VillageState {
     } else {
       let parcels = this.parcels.map(p => {
         if (p.location != this.location) return p;
-        //if the package is not here don't change it
         return {id: p.id, location: destination, address: p.address}
-        //if the package is here, take it to destination
       });
       if(parcels.some(p => p.location == p.address)){
         let parcelsCopy = parcels.slice();
@@ -55,17 +52,60 @@ class VillageState {
           p => " " + p.id + ":" + p.location);
         console.log(`Delivered: ${report}`);
       }
-
       let parcelsWithDeliveredRemoved = parcels.filter(p => p.location != p.address);
       let nextVillageState = new VillageState(destination, parcelsWithDeliveredRemoved);
       console.log( "                             :" + nextVillageState.prettyParcels);
-      //if a package's address is here leave it here (remove from parcels)
       return nextVillageState;
     }
   }
   get prettyParcels() {
     return this.parcels.map(p => p.id + ":" + p.location + "-" + p.address);
   }
+}
+VillageState.random = function(parcelCount = 5) {
+  let parcels = [];
+  for (let i = 0; i < parcelCount; i++) {
+    let address = randomPick(Object.keys(roadGraph));
+    let location;
+    do {
+      location = randomPick(Object.keys(roadGraph));
+    } while (location == address);
+    parcels.push({id: i, location, address});
+  }
+  return new VillageState("PostOffice", parcels);
+}
+function randomPick(array) {
+  let choice = Math.floor(Math.random() * array.length);
+  return array[choice];
+}
+function findRoute(graph, from, to) {
+  let work = [{at: from, route: []}];
+  for (let i = 0; i < work.length; i++){
+    let {at, route} = work[i];
+    for (let location of graph[at]) {
+      if (location == to) {
+        return route.concat(location);
+      }
+      if (!work.some(w => w.at == location)) {
+        work.push({at: location, route: route.concat(location)});
+      }
+    }
+  }
+}
+function goalOrientedRobot({location, parcels}, route) {
+  if (route.length == 0) {
+    let parcel = parcels[0];
+    if (parcel.location != location) {
+      route = findRoute(roadGraph, location, parcel.location);
+      console.log("---------- parcel.location != location ---------- route:");
+      console.log(route);
+    } else {
+      route = findRoute(roadGraph, location, parcel.address)
+      console.log("---------- parcel.location == location ---------- route:");
+      console.log(route);
+    }
+  }
+  return {direction: route[0], memory: route.slice(1)}
 }
 function runRobot(state, robot, memory) {
   for (let turn = 0; turn < 20; turn++){
@@ -80,48 +120,24 @@ function runRobot(state, robot, memory) {
     console.log(`${action.direction}: `);
   }
 }
+// let villageState = VillageState.random(2);
 
-function randomPick(array) {
-  let choice = Math.floor(Math.random() * array.length);
-  return array[choice];
-}
-function randomRobot(state) {
-  return {direction: randomPick(roadGraph[state.location])};
-}
-
-VillageState.random = function(parcelCount = 5) {
+function testParcels(){
   let parcels = [];
-  for (let i = 0; i < parcelCount; i++) {
-    let address = randomPick(Object.keys(roadGraph));
-    let location;
-    do {
-      location = randomPick(Object.keys(roadGraph));
-    } while (location == address);
-    parcels.push({id: i, location, address});
-  }
-  return new VillageState("PostOffice", parcels);
+  let address = Object.keys(roadGraph)[5];
+  let location = Object.keys(roadGraph)[6];
+  parcels.push({id: 0, location, address});
+  address = Object.keys(roadGraph)[7];
+  location = Object.keys(roadGraph)[8];
+  parcels.push({id: 1, location, address});
+  return parcels;
 }
-
-
-let villageState = VillageState.random(2);
-console.log("----------------------------------------robot's beginning location");
-console.log(villageState.location);
-console.log("-----------------------------------------------------------parcels");
+// let parcels = testParcels();
+// let villageState = new VillageState("PostOffice", parcels);
+let villageState = new VillageState.random()
+console.log("----------------------------------------------------villageState");
+console.log(villageState);
+console.log("----------------------------------------------------------parcels");
 console.log(villageState.prettyParcels);
-// runRobot(villageState, randomRobot);
 
-var mailRoute = [
-  "Alice", "Cabin", "Alice", "Bob",
-  "TownHall", "Daria", "Ernie",
-  "Grete", "Shop", "Grete", "Farm",
-  "Marketplace", "PostOffice"
-];
-
-function routeRobot(state, memory) {
-  if (memory.length == 0) {
-    memory = mailRoute;
-  }
-  return {direction: memory[0], memory: memory.slice(1)};
-}
-
-runRobot(villageState, routeRobot, mailRoute);
+runRobot(villageState, goalOrientedRobot, []);
