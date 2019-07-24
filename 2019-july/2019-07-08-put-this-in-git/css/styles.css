@@ -51,3 +51,12 @@ a:visited {
 a:hover {
   color: #e9a41f;
 }
+.column {
+  float: left;
+  width: 30%;
+  width: 300px;
+  margin: 1%;
+}
+img: {
+  display: block:
+}
