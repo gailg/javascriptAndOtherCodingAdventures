@@ -23,8 +23,8 @@ function arrayToList(array){
         return {a: a, b: arrayToList(array)};
     }
   }
-// let sangea = [1, [2, 3], 4];
 let sangea = [1, 2];
+// let sangea = [1, 2];
 console.log(`-----console.log(sangea)`);
 console.log(sangea);
 // let useThisOne = Array.from(sangea);
@@ -66,7 +66,30 @@ console.log(writeList(result));
 
 
 
+// console.log(`-----console.log(writeList(arrayToList([1, [2, 3], 4])))`);
+// console.log(writeList(arrayToList([[1, 2, 3], 4, [5, 6]])));
 
-console.log(`-----console.log(writeList(arrayToList([1, [2, 3], 4])))`);
-console.log(writeList(arrayToList([1, [2, 3], 4])));
+
+
+
+function listToArray(list, beginning){
+    let aPart = isList(list.a) ? listToArray(list.a) : list.a;
+    if (list.b === null) {
+        if (beginning){
+            return [aPart];
+        } else {
+            return aPart;
+        }
+    } else {
+        if (beginning){
+            return [aPart.push(listToArray(list.b, false))];
+        } else {
+            return aPart.push(listToArray(list.b, false));
+        }
+    }
+}
+console.log(`-----console.log(listToArray(result, true))`);
+console.log(listToArray(result, true));
+// console.log(`-----console.log(listToArray(result))`);
+// console.log(listToArray(result));
 console.log(`--------------------------------------------------------------last line`);
