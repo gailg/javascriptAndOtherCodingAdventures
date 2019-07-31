@@ -24,7 +24,7 @@ function arrayToList(array){
         return {a: a, b: arrayToList(array)};
     }
   }
-let amy = [1, 2, [3, 4], 5];
+let amy = [1, 2, 3, 4];
 // amy = [1, 2, 3, 4];
 let useThisOne = copy(amy);
 let lawrence = arrayToList(useThisOne);
@@ -43,16 +43,46 @@ function pretty(list){
     let secondPart = list.b === null ? null : pretty(list.b);
     return firstPart + "b: " + secondPart + "}";
 }
+
+
+/*
+function listToArray(monty, array = []){
+    array.push(monty.apple);
+    if (monty.bowl === null){
+      return array;
+    } else {
+      return listToArray(monty.bowl, array);
+    }
+  }
+*/
+
 function listToArray(list, beginning){
-    let aPart = isList(list.a) ? listToArray(list.a, true) : list.a;
+    if (isList(list.a)){
+        console.log(`list.a`);
+        console.log(list.a);
+        console.log(pretty(list.a));
+        aPart = listToArray(list.a, true);
+    } else {
+        aPart = list.a;
+    }
+    console.log(`aPart`);
+    console.log(aPart);
     if (list.b === null) {
+        console.log(`list.b === null`);
         if (beginning){
+            console.log(`list.b === null && beginning`);
             return [aPart];
         } else {
+            console.log(`list.b === null && not beginning`);
             return aPart;
         }
     } else {
+        console.log(`list.b`);
+        console.log(list.b);
+        console.log(pretty(list.b));
         let bPart = listToArray(list.b, false);
+        console.log(`bPart`);
+        console.log(bPart);
         let array;
         if (beginning){
             array = [aPart];
@@ -60,9 +90,51 @@ function listToArray(list, beginning){
             array = aPart;
         }
         array.push(bPart);
+        console.log(`array`);
+        console.log(array);
         return array;
     }
 }
+function listToArray(list, beginning){
+    if (isList(list.a)){
+        console.log(`list.a`);
+        console.log(list.a);
+        console.log(pretty(list.a));
+        aPart = listToArray(list.a, true);
+    } else {
+        aPart = list.a;
+    }
+    console.log(`aPart`);
+    console.log(aPart);
+    if (list.b === null) {
+        console.log(`list.b === null`);
+        if (beginning){
+            console.log(`list.b === null && beginning`);
+            return [aPart];
+        } else {
+            console.log(`list.b === null && not beginning`);
+            return aPart;
+        }
+    } else {
+        console.log(`list.b`);
+        console.log(list.b);
+        console.log(pretty(list.b));
+        let bPart = listToArray(list.b, false);
+        console.log(`bPart`);
+        console.log(bPart);
+        let array;
+        if (beginning){
+            array = [aPart];
+        } else {
+            array = aPart;
+        }
+        array.push(bPart);
+        console.log(`array`);
+        console.log(array);
+        return array;
+    }
+}
+
 console.log(`-----console.log(pretty(lawrence))`);
 console.log(pretty(lawrence));
 
