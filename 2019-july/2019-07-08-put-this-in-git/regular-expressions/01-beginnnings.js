@@ -1,0 +1,30 @@
+let literalSyntax = /dog/g;
+let constructorSyntax = new RegExp("dog", "g");
+let larrysString = "Dogs go to doggy parks!";
+console.log(`-----larrysString`);
+console.log(larrysString);
+console.log(`-----larrysString.match(/dog/)`);
+console.log(larrysString.match(/dog/));
+console.log(`-----larrysString.match(/(D|d)ogs?/g)`)
+console.log(larrysString.match(/(D|d)ogs?/g));
+let message = "email me at fo@fo.com or do@do.net or if you like email me at email@@comm";
+console.log(`-----message`);
+console.log(message);
+message.match(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g);
+console.log(`-----message.match(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g)`);
+console.log(message.match(/[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g))
+console.log(`-----"A153f2af1532143f2f1".match(/[a-z]1/ig)`);
+console.log("A153f2af1532143f2f1".match(/[a-z]1/ig));
+let dogbite = "Dog bite\nDog Bite\nDog BiteDog";
+console.log(dogbite.match(/^Dog/mg));
+let star = "The * character is called a * splat or star";
+console.log(`-----"The * character is called a * splat or star".match(/\*/g)`);
+console.log("The * character is called a * splat or star".match(/\*/g));
+console.log(`-----"codi or cody or kodi".match(/(k\c)od(i|y)/g)`);
+console.log("codi or cody or kodi".match(/(k|c)od(i|y)/g));
+console.log(`-----"abcdefghijklmnopqrstuvwxyz 0123456789".match(/[agc]|[1237]/g))`);
+console.log("abcdefghijklmnopqrstuvwxyz 0123456789".match(/[agc]|[1237]/g));
+console.log(`-----"abcdefghijklmnopqrstuvwxyz 0123456789".match(/[a-g]|[4-7]/g)`);
+console.log("abcdefghijklmnopqrstuvwxyz 0123456789".match(/[a-g]|[4-7]/g));
+console.log(`-----"abcdefghijklmnopqrstuvwxyz 0123456789".match(/[^a-z]/g)`);
+console.log("abcdefghijklmnopqrstuvwxyz 0123456789".match(/[^a-z]/g));

@@ -1,0 +1,17 @@
+body {
+  color: #414141; /* Dark gray */
+  background-color: #eeeeff;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-size: 4em;
+}
+h2 {
+  font-size: 3em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poiret One', cursive;
+  color: #3c3f6f;
+  font-weight: 100;
+}
