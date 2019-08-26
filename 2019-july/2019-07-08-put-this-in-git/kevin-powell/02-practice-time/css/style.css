@@ -1,0 +1,64 @@
+body {
+    font-size: 16px;
+    color: #111111;
+}
+
+h1 {
+    color: #2e7ad3;
+    text-align: center;
+    font-size: 48px;
+    margin: 45px 0;
+}
+
+h2 {
+    color: #104c90;
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+a {
+    color: #ff8000;
+    font-weight: 600;
+}
+
+a:hover, 
+a:focus {
+    color: #ffa600;
+}
+
+/* typography related stuff above */
+
+.blog-content {
+    background: #f1f1f1;
+    padding: 25px;
+    width: 450px;
+    margin: 0 auto;
+
+}
+
+.read-more {
+    margin: 0;
+}
+
+/*
+I manually made the image 450px.
+
+Put the default stuff in body 
+instead of p (to cover other 
+elements).
+
+He specified a width of 500px,
+so he used width of 450px 
+and padding of 25px.
+
+The margin stuff is beyond me.
+There is a default margin
+which is what I don't understand.
+
+Remember to center a div
+use margin 0 auto
+
+The shortcut assumes clockwise 
+starting at top.
+
+*/

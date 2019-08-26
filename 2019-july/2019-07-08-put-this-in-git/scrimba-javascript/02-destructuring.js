@@ -16,7 +16,7 @@ const half = (function() {
 })();
 console.log(stats); 
 console.log(half(stats)); 
-console.log(`---------------------------------------------------------- template literal`);
+console.log(`-------------------------------------------------------- template literal`);
 const person = {
   name: "Zodiac Hasbro",
   age: 56
@@ -45,3 +45,7 @@ function makeList(arr) {
  **/
 const resultDisplayArray = makeList(result.failure);
 console.log(resultDisplayArray);
+
+console.log(`-------------------------------------------------------- object litteral declarations using simple fields`)
+const createPerson = (name, age, gender) => ( {name, age, gender} )  ;
+console.log(createPerson("Zodiac Hasbro", 56, "male"));

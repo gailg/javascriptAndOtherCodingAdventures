@@ -1,3 +1,4 @@
+"use strict";
 const magic = () => Date();
 const myConcat = (array1, array2) => array1.concat(array2);
 console.log(`------------------------------------------------------arrow function in filter and map`);
