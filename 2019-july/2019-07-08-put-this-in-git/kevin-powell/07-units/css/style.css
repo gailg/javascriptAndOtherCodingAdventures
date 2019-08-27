@@ -1,5 +1,6 @@
-body {
+html {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5 rem;
 }
 .card {
     background: #000;
@@ -14,12 +15,10 @@ h1, p {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 2rem;
+    margin-bottom: 1.5em;
 }
 
-p {
-    font-size: 18px;
-}
 a {
     color: #ffe600;
 }
@@ -28,7 +27,8 @@ a {
     display: inline-block;
     background: #ffe600;
     color: black;
-    padding: 15px 30px; /* top bottom 1: left right 2  */
+    /*padding: 15px 30px; /* top bottom 1: left right 2  */
+    padding: 1em 1.5em; /* em is relaive to the font-size of this element */
     text-align: center;
     text-decoration: none;
     
@@ -42,6 +42,7 @@ a {
 .links {
     margin-top: 45px;
     margin-bottom: 0;
+    font-weight: 900;
 
 }
 strong {
@@ -50,6 +51,16 @@ strong {
 }
 .punch {
     color: yellow;
+}
+
+.button-big {
+    font-size: 1.5rem;
+}
+.button-default {
+    font-size: 1rem;
+}
+.button-small {
+    font-size: .75rem;
 }
 
 
