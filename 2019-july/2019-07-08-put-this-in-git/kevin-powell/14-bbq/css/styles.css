@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*==============================================
+    typography
+==============================================*/
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: white;
+}
+
+h1 + p,
+h2 + p,
+.top-text {
+    color: #f18119;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/* make a class instead to be more robust */
+h1 + p {         /* p is a next sib of h1 */
+    font-size: 1.3125rem;
+    letter-spacing: 1px;
+    
+}
+h2 {
+    font-size: 1.3125rem;
+}
+
+h2 + p {
+    letter-spacing: 1px;
+}
+.top-text {
+    font-size: 0.625rem;
+    letter-spacing: 3px; 
+}
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+strong {
+    font-weight: 900;
+}
+
+/*==============================================
+    intro
+==============================================*/
+
+.intro {
+    background-color: #404040;
+    background-image: url(../images/dark-ribs.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+}
+
+h1 {
+    margin: 0;
+}
+h1 + p {
+    margin: 0;
+}
+.top-text {
+    order: -1;
+}
+  /* direct child of intro or main-content */
+/* .intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+/*==============================================
+    main-content
+==============================================*/
+
+.main-content {
+    padding: 2em 1em;
+}
+
+h2 {
+    margin: 0;
+}
+
+h2 + p {
+    margin-top: 0;
+}
+
+/*==============================================
+    media query
+==============================================*/
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h1 + p,
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container-intro {
+        height: 100%
+    }
+}
