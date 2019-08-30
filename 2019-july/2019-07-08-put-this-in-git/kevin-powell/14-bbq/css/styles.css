@@ -57,11 +57,14 @@ strong {
 ==============================================*/
 
 .intro {
-    background-color: #404040;
-    background-image: url(../images/dark-ribs.jpg);
+    /* background-color: #404040; */
+    background-image: url(../images/ribs.jpg), linear-gradient(45deg, #000000, #ffffff);
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     padding: 0 .5em 2em;
+
+    min-height: 50vh;
 }
 
 h1 {
@@ -73,23 +76,18 @@ h1 + p {
 .top-text {
     order: -1;
 }
-  /* direct child of intro or main-content */
-/* .intro > *,
+/* direct child of intro or main-content */
+.intro > *,
 .main-content > * {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-} */
-.container {
-    max-width: 400px;
-    margin: 0 auto;
 }
-
-.container-intro {
+.intro,
+.main-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 50vh;
 }
 /*==============================================
     main-content
@@ -105,6 +103,60 @@ h2 {
 
 h2 + p {
     margin-top: 0;
+}
+
+
+.top-text {
+    border-top: 10px solid #f18119;
+    margin-top: 0;
+    padding-top: 1em;
+    border-image: linear-gradient(to bottom right, #ff713b, #ffa51d) 1;
+}
+/*==============================================
+    form
+==============================================*/
+
+.email-collector {
+    width: 60%;
+    max-width: 300px;
+}
+input,
+.button {
+    width: 100%;
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: 1.5em;
+    border-radius: 3px;
+
+}
+input {
+    border: 1px solid #404040;
+    padding: .5em;
+}
+.button {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 900;
+    border: 0;
+    padding: .7em;
+    cursor: pointer;
+}
+
+.button-primary {
+    background: linear-gradient(to top left, #ff713b, #ffa51d);
+}
+
+input,
+.button-primary {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus,
+.button-primary:hover,
+.button-primary:focus {
+    transform: scale(1.05);
 }
 
 /*==============================================
