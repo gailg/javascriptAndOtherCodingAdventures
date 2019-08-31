@@ -1,0 +1,43 @@
+
+/*-------------------------------------------------
+    typography
+-------------------------------------------------*/
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+    background: #333;
+}
+.portfolio-title {
+    text-align: center;
+    color: #00C896;
+}
+.portfolio-card {
+    box-shadow: 0 0 1em rgba(0,0,0,.25);
+    background: white;
+}
+
+.portfolio-card-title {
+    font-size: 1.5rem;
+    color: #000;
+}
+/*-------------------------------------------------
+    layout
+-------------------------------------------------*/
+body {
+    margin: 3em;
+}
+.portfolio {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1em;
+}
+.portfolio-title {
+    grid-column: 1 / -1;
+}
+img {
+    max-width: 100%;
+}
+.portfolio-card {
+    padding: 1em;
+}
