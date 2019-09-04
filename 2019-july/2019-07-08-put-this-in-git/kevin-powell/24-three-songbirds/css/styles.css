@@ -2,32 +2,35 @@
     typography
 -------------------------------------------------*/
 body {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #322e22;
 }
-.blog-content {
-    background: #f4f2eb;
+h1,
+h2,
+a {
+    font-weight: 700;
+    line-height: 1.2;
 }
-.title {
+h1 {
     color:  #716956;
-    font-size: 48px;
-    font-weight: 700;
 }
-.blog-title {
+h2 {
     color: #3c372a;
-    font-size: 32px;
-    font-weight: 700;
+}
+img {
+    background: white;
 }
 a:link,
 a:visited {
     color: #3c372a;
-    font-weight: 700;
 }
 a:hover,
 a:focus {
     color: #FFA500;
+}
+.container {
+    background: #f4f2eb;
 }
 /*-------------------------------------------------
     layout
@@ -38,13 +41,18 @@ a:focus {
 body {
     margin: 0;
 }
-.title {
-    padding: 2rem;
-}
+.header,
 .blog-content {
-    padding: 2rem;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    padding: .5em 0;
 }
-.blog-title {
-    margin: 0;
+img {
+    display: block;
+    width: 100%;
+}
+p {
+    padding: .5em 0;
 }
 
