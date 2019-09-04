@@ -1,51 +1,33 @@
+/*-------------------------------------------------
+    typography
+-------------------------------------------------*/
 body {
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
-h1, h2, p {
-    margin-top: 0;
-}
-
 h1 {
     font-size: 24px;
 }
-
 p {
     font-size: 18px;
 }
-
 a {
     color: #ffe600;
 }
-
-header,
-section {
-    padding: 50px;
-}
-
 header {
     background: #ffe600;
     color: black;
 }
-
 .section-one {
     background: black;
     color: white;
-
 }
-
 .section-two a {
     color: black;
 }
-
 .button {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 25px;
     text-decoration: none;
     font-weight: bold;
 }
-
 .section-one .button {
     background: #ffe600;
     color: black;
@@ -53,11 +35,35 @@ header {
 .section-one .button:hover {
     background: #faed78;
 }
-
 .section-two .button {
     background: black;
     color: #ffe600;
 }
 .section-two .button:hover {
     background: gray;
+}
+/*-------------------------------------------------
+    layout
+-------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header,
+section {
+    padding: 50px;
+}
+h1, h2, p {
+    margin-top: 0;
+}
+h1 {
+    margin-bottom: 0;
+}
+.button {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 25px;
+
 }
