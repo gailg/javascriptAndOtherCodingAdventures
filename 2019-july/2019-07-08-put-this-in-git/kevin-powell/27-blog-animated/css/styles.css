@@ -13,6 +13,7 @@ body {
 header {
     text-align: center;
 }
+
 h1, h2 {
     font-family: 'Lora', serif;
     color: #aabd2a;
@@ -55,12 +56,22 @@ a:focus {
     font-size: 0.875
 }
 .article-featured-continue-reading {
-    text-transform: uppercase;
+    text-transform: lowercase;
+    letter-spacing: 2px;
 }
 @media (min-width: 700px) {
     header {
         text-align: left;
     }
+}
+.footer {
+    background: #6334a9;
+
+}
+.foot {
+    color: #6b873e;;
+    text-align: center;
+    font-weight: 700;
 }
 /* ====================
 Layout
@@ -82,6 +93,7 @@ img {
 header {
     padding: 2em 0;
 }
+.footer,
 .container {
     margin: 0 auto;
     width: 90%;
@@ -92,6 +104,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.header-image {
+    margin-bottom: 2em;
 }
 /* navigation */
 .nav-list {
@@ -118,9 +133,15 @@ header {
     border-bottom: #6334a9 solid 1px;
     margin-bottom: 4em;
 }
+
 .article-featured {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
+}
+.article-title {
+    /* border: magenta 1px solid; */
+    margin-bottom: 0;
 }
 .article-image {
     order: -2;
@@ -129,7 +150,7 @@ header {
     order: -1;
 }
 .article-info {
-    margin: 1.5em 0;
+    /* margin: 1.5em 0; */
 }
 .article-featured-continue-reading {
     text-decoration: none;
@@ -142,12 +163,38 @@ header {
 .article-recent-secondary {
     order: -1;
 }
-/* .article-recent-image {
-    height: 300px;
+.article-recent-image {
+    height: 400px;
     width: 100%;
     object-fit: cover;
-} */
-@media (min-width: 700px) {
+}
+/* sidebar */
+.sidebar-wiget-no-image,
+.sidebar-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sidebar-widget{
+    margin-top: 1.5em;
+}
+.sidebar-widget-no-image {
+    margin-top: 1.5em;
+}
+.sidebar-widget-image {
+    /* order: -1; */
+    margin-bottom: 1em;
+}
+.footer {
+    padding: 2em 0;
+}
+.foot{
+    margin: 0;
+}
+.article-recent-last {
+    margin-bottom: 0;
+}
+@media (min-width: 750px) {
     .container-flex {
         flex-direction: row;
     }
@@ -159,7 +206,7 @@ header {
         width: 70%;
     }
     aside {
-        width: 25%;
+        width: 26%;
     }
     .article-recent {
         flex-direction: row;
@@ -171,13 +218,24 @@ header {
     .article-recent-secondary {
         width: 40%;
     }
+    .article-recent-image {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .article-recent-last {
+        border-bottom: 0;
+    }
+    .sidebar-widget{
+        margin-top: 0;
+    }
 }
 @media (max-width: 400px) {
     .nav-list {
         flex-direction: column;
-
     }
     .nav-list-item {
         margin: .4em;
     }
 }
+
