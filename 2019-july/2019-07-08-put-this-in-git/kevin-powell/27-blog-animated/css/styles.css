@@ -59,17 +59,18 @@ a:focus {
     text-transform: lowercase;
     letter-spacing: 2px;
 }
-@media (min-width: 700px) {
+@media (min-width: 750px) {
     header {
         text-align: left;
     }
 }
 .footer {
-    background: #6334a9;
-
+    background: #6b873e;
+    background: rgba(107, 135, 62, .2);
+    /* background-image: url(../images/footer.jpg) */
 }
 .foot {
-    color: #6b873e;;
+    color: #6334a9;
     text-align: center;
     font-weight: 700;
 }
@@ -133,7 +134,6 @@ header {
     border-bottom: #6334a9 solid 1px;
     margin-bottom: 4em;
 }
-
 .article-featured {
     display: flex;
     flex-direction: column;
@@ -148,9 +148,6 @@ header {
 }
 .article-info {
     order: -1;
-}
-.article-info {
-    /* margin: 1.5em 0; */
 }
 .article-featured-continue-reading {
     text-decoration: none;
