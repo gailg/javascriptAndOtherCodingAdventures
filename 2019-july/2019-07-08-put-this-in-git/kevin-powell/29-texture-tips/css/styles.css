@@ -1,0 +1,81 @@
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #553fb4;
+    font-weight: 600;
+}
+.card-body {
+    color: #3e2f68;
+}
+.card-image {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.card-button {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.card-read-time {
+    color: #3e2f68;
+    line-height: 1;
+    letter-spacing: .8px;
+}
+.card-read-time span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: block;
+}
+.card-button {
+    background-image: linear-gradient(150deg, #3e2f68, #553fb4);
+    /* background-image: url(../images/acrylic-pouring-500x750.jpg); */
+    background-position: left bottom;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    padding: 1em;
+}
+.card-title {
+    margin: .5em 0;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 3em 0;
+}
+.card-read-time {
+    margin: 0;
+}
+
+.card-button {
+    padding: .4em .8em .5em;
+}
