@@ -1,0 +1,143 @@
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #553fb4;
+    font-weight: 600;
+}
+.card-body {
+    color: #3e2f68;
+}
+
+.card {
+    background-image: linear-gradient(130deg, white, white, #d6cff5);
+}
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.card-button {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.card-read-time {
+    color: #3e2f68;
+    line-height: 1;
+    letter-spacing: .8px;
+    opacity: .9;
+}
+.card-read-time span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: block;
+}
+.card-button {
+    background-image: linear-gradient(150deg, #3e2f68, #553fb4);
+    /* background-image: url(../images/acrylic-pouring-500x750.jpg); */
+    background-position: left bottom;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.card-button {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+.card-button:hover,
+.card-button:focus {
+    transform: scale(1.1);
+}
+
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    display: grid;
+    grid-template: 350px 1em auto auto 150px 1em / 1em auto auto 1em;
+}
+.card-image {
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 100%;
+}
+.card-title,
+.card-body {
+    grid-column: 2 / -2;
+    margin: .2em 0;
+    /* border: magenta 1px solid; */
+}
+.card-title {
+    grid-row: 3;
+    margin-top: 0;
+}
+.card-body {
+    grid-row: 4;
+    padding-right: 2em;
+}
+.card-read-time,
+.card-button {
+    margin: 0;
+    padding: 0;
+    align-self: end;
+    grid-row: 5;
+    grid-column: 2;
+
+}
+.card-button {
+    justify-self: end;
+    padding: .6em 1.6em .8em 1.6em;
+    grid-row: 5;
+    grid-column: 3;
+
+}
+@media (min-width: 800px) {
+    .card {
+        grid-template: 1em auto auto 150px 1em / 1.5fr 1em .5fr 1fr 1em;
+    }
+    .card-image {
+        grid-row: 1 / -1;
+        grid-column: 1
+    }
+    .card-title,
+    .card-body {
+        grid-column: 3 / -2;
+    }
+    .card-title {
+        grid-row: 2;
+    }
+    .card-body {
+        grid-row: 3;
+    }
+    .card-button,
+    .card-read-time {
+        grid-row: 4;
+    }
+    .card-read-time {
+        grid-column: 3;
+    }
+    .card-button {
+        grid-column: 4;
+    }
+
+}
