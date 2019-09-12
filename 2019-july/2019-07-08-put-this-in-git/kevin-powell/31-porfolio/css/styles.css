@@ -1,0 +1,71 @@
+
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #3b306c;
+}
+.portfolio-title,
+.portfolio-card-title {
+    color: #553fb4;
+}
+h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+}
+.portfolio {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+} 
+.portfolio-title {
+    text-align: center;
+    grid-column: 1 / -1;
+}
+/* .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+} */
+img {
+    max-width: 100%;
+}
+.portfolio-card {
+    /* box-shadow: 0 0 1em rgba(0,0,0,.25); */
+    padding: 1em;
+    
+}
+.portfolio-card-title,
+.portfolio-card-title,
+.porfolio-card-p {
+    margin: 0;
+}
+.portfolio-card-title {
+    margin-top: 1rem;
+}
+
+
