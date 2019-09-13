@@ -1,0 +1,102 @@
+
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: #f3ebad;
+    --pink: #eabbbd;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 600;
+    /* color: #3b306c; */
+    color: var(--purple);
+}
+.item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    border-radius: 3px;
+    font-size: 35px;
+    background: var(--yellow);
+   
+  }
+/* ============================================
+    Layout
+=============================================*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* body {
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr 2fr);
+    grid-template-rows: repeat(10, 50px);
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+}
+.item1 {
+    grid-column: 3 / 5;
+    background: palevioletred;
+}
+.item2 {
+    grid-column: 5 / -1;
+    background-color: plum;
+}
+.item5 {
+    grid-row: span 2;
+    grid-column: span 2;
+    background: cadetblue;
+}
+.item8 {
+    grid-row: span 2;
+    background: honeydew;
+}
+.item15 {
+    grid-column: 1 / -1;
+    background: lavender;
+}
+.item18 {
+    grid-column: span 4 / 9;
+    background: paleturquoise;
+}
+.item20 {
+    grid-row: 4 / span 3;
+    background: lightcoral;
+}
+
+   
+
+
+}

@@ -1,0 +1,74 @@
+
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: lightgoldenrodyellow;
+    --pink: #eabbbd;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 600;
+    /* color: #3b306c; */
+    color: var(--purple);
+}
+.itm {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    border-radius: 3px;
+    font-size: 35px;
+    background: var(--yellow);
+   
+  }
+/* ============================================
+    Layout
+=============================================*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+.itm {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(5, 100px);
+    /* justify-items: center;
+    align-items: center; */
+    /* place-items: center center; */
+    justify-content: center;
+    align-content: center;
+
+}
+
+
