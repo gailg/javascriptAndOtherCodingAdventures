@@ -1,0 +1,89 @@
+
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: lightgoldenrodyellow;
+    --pink: #eabbbd;
+    --turquoise: #edf7f7;
+    --gray: #f2f2f2;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 600;
+    /* color: #3b306c; */
+    color: var(--purple);
+}
+.itm {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    border-radius: 3px;
+    font-size: 35px;
+    background: var(--yellow);
+   
+  }
+h2 {
+    font-size: 1.5rem;
+}
+.background {
+    background: var(--gray);
+}
+
+/* ============================================
+    Layout
+=============================================*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0;
+}
+.img {
+    display: block;
+}
+.background {
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    display: grid;
+
+    align-content: center;
+}
+.container {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 1em;
+
+}
+.container>* {
+    background: var(--purple);
+    color: white;
+    margin-right: 1em;
+    flex: 1;
+
+    padding: 1em;
+    display: grid;
+    align-content: center;
+    text-align: center;
+
+}
+
+
