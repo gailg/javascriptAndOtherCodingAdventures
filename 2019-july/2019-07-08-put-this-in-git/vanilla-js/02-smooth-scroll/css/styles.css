@@ -1,0 +1,56 @@
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: #f4d17a;
+    --orange: #f27c4e;
+    --red: #ed4800;
+    --mutedPurple: #9e78a2;
+    --blue: #8cb9b5;
+    --green: #759488;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--darkPurple);
+}
+a {
+    color: var(--purple); 
+}
+.box1 {
+    background-color: var(--blue);
+}
+.box1 a {
+    color: white;
+}
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.box1,
+.box2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.box1 {
+    
+    justify-content: center;
+}
+.box2 {
+    justify-content: center;
+    flex-direction: column;
+}
+.box2 a {
+    margin: 1em;
+}
+
+

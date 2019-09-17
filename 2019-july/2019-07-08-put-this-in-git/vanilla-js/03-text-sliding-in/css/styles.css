@@ -1,0 +1,86 @@
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: #f4d17a;
+    --orange: #f27c4e;
+    --red: #ed4800;
+    --mutedPurple: #9e78a2;
+    --blue: #8cb9b5;
+    --green: #759488;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--darkPurple);
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+
+}
+/* h2 {
+    font-size: 4rem;
+} */
+a {
+    color: var(--purple); 
+}
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    /* min-width: 0; */
+    max-width: 100%;
+    height: auto;
+}
+.intro {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.intro-title {
+    padding: 300px 600px 400px 100px;
+}
+.intro-content {
+    display: flex;
+    padding-bottom: 200px;
+}
+h2 {
+    padding: 0px 200px 100px 0px;
+    /* border: magenta 1px solid; */
+}
+.intro-content-text {
+    transform: translateY(400px);
+    transition: 1s all ease-out;
+    flex: 1;
+    padding-right: 200px;
+    /* opacity: 0.1; */
+}
+.intro-content-text-appear {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+
+
