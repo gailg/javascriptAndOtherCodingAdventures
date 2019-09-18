@@ -1,0 +1,69 @@
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: #f4d17a;
+    --orange: #f27c4e;
+    --red: #ed4800;
+    --mutedPurple: #9e78a2;
+    --blue: #8cb9b5;
+    --green: #759488;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--darkPurple);
+}
+h1 {
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    text-align: center;
+    /* border: magenta solid 1px; */
+}
+.showcase-text {
+    text-align: center;
+}
+a {
+    color: var(--purple); 
+}
+.button {
+    /* border: magenta solid 1px; */
+}
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.showcase {
+    background-image: url("../images/orange.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding:100px 100px 200px;
+}
+.showcase,
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.showcase {
+    justify-content: space-between;
+}
+h1 {
+    padding-bottom: 1em;
+}
+
+
+

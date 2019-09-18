@@ -1,0 +1,105 @@
+:root {
+    --darkPurple: #3b306c;
+    --purple: #553fb4;
+    --yellow: #f4d17a;
+    --orange: #f27c4e;
+    --red: #ed4800;
+    --mutedPurple: #9e78a2;
+    --blue: #8cb9b5;
+    --green: #759488;
+    --yellow-gray: #ebeadc;
+    --gray: #f0f0f0;
+}
+
+/* ============================================
+     Typography
+=============================================*/
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--darkPurple);
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+}
+
+/* ============================================
+     Layout
+=============================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    padding: 100px 0;
+}
+.form {
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    
+}
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #4f5466;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+.form label,
+.form label::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    left: 0%;
+}
+.form label {
+    bottom: 0px;
+    pointer-events: none;
+    border-bottom: 1px solid var(--darkPurple);
+}
+
+.form label::after {
+    bottom: -1px;
+    content: "";
+    border-bottom: 3px solid #5fa8d3;
+    transform: translate(-100%);
+    transition: transform all 0.3s ease;
+}
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+    transform: tranlateX(0%);
+}
+
+
+
