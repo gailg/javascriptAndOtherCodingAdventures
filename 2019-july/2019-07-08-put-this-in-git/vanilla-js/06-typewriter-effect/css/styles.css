@@ -26,8 +26,9 @@ h1,
 h2 {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Special Elite', cursive;
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 3rem;
 
 }
 /* h2 {
@@ -44,44 +45,41 @@ a {
     margin: 0;
     padding: 0;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-img {
-    /* min-width: 0; */
-    max-width: 100%;
-    height: auto;
-}
 .intro {
-    width: 80%;
+    padding: 50px;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-}
-.intro-title {
-    padding: 300px 600px 400px 100px;
-}
-.intro-content {
-    display: flex;
-    padding-bottom: 200px;
-}
-h2 {
-    padding: 0px 200px 100px 0px;
-    /* border: magenta 1px solid; */
-}
-.intro-content-text {
-    transform: translateY(400px);
-    transition: 1s all ease-out;
-    flex: 1;
-    padding-right: 200px;
-    /* opacity: 0.1; */
-}
-.intro-content-text-appear {
-    opacity: 1;
-    transform: translateY(0);
 
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+     rgba(255, 255, 255, 0.9)),  
+      url("../images/background-js.jpg");
+    background-size: cover;
+}
+
+.typing {
+    position: relative;
+    padding-left: .5em;
+    /* border: magenta 1px solid; */
+
+
+}
+.typing::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 7%;
+    /* right: -.5em; */
+    border-right: 4px solid var(--darkPurple);
+    animation: blink .7s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
