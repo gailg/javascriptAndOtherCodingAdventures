@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Larry Otter",
+    "company": "123 Ocean",
+    "phone": "123-456-7890"
+  },
+  {
+    "id": 2,
+    "name": "Charles Ray",
+    "company": "Monterey Bay Aquarium",
+    "phone": "123-456-2222"
+  },
+  {
+    "id": 3,
+    "name": "Baby Star",
+    "company": "Pink Coral Reef",
+    "phone": "123-456-3333"
+  }
+]
