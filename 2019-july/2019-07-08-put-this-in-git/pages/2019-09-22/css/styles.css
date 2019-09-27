@@ -1,0 +1,81 @@
+:root {
+  --darkPurple: #3b306c;
+  --purple: #553fb4;
+  --yellow: lightgoldenrodyellow;
+  --pink: #eabbbd;
+  --turquoise: #edf7f7;
+  --gray: #f2f2f2;
+}
+/* ============================================
+     Typography
+=============================================*/
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  line-height: 2.6;
+  font-weight: 400;
+  color: var(--purple);
+}
+h2 {
+  margin: 0;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-weight: 300;
+  font-size: 5rem;
+}
+input {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* ============================================
+   Layout
+=============================================*/
+* {
+  box-sizing: border-box;
+  
+}
+input {
+  padding: 1rem;
+}
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas:
+  "a b"
+  "c d";
+  /* justify-content: center; */
+  align-items: center;
+}
+.input-label {
+  grid-area: a;
+  padding: 0 1em 0 2em;
+  /* border: magenta 1px solid; */
+
+}
+input {
+  grid-area: b;
+  padding: 1 2em 1 1em;
+  /* border: magenta 1px solid; */
+}
+.answer-label {
+  grid-area: c;
+  
+  padding: 1em 1em 1em 2em;
+  /* border: magenta 1px solid; */
+}
+
+.answer {
+  grid-area: d;
+  padding: 1em 2em 1em 1em;
+  border: magenta 1px solid;
+  
+}
+

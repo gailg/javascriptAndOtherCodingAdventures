@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>forms-inputs</title>
+</head>
+<body>
+  
+<div class="container">
+    <h4>forms and inputs</h4>
+    <p>When I use materialize, select, radio, checkbox do not work or show up.</p>
+    <form action="process.php">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Larry Otter">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="ltotter@ocean.org">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="50" rows="10"></textarea>
+        </div>
+        <div>
+          <label for="sex"></label>
+          <select name="sex" id="sex">
+            <option value="male">Male</option>
+            <option value="female" selected>Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="age">Age</label><br>
+          <input type="number" name="age" id="age">
+        </div>
+        <div>
+          <label for="birthdate">Birthdate</label><br>
+          <input type="date" name="birthdate" id="birthdate">
+        </div>
+        <div>
+          <label for="membership">Membership</label>
+          <input type="radio" name="membership" id="membership" value="simple">Simple
+          <input type="radio" name="membership" id="membership" value="standard" checked>Standard
+          <input type="radio" name="membership" id="membership" value="super">Super
+        </div>
+        <div>
+          <label for="hobbies">hobbies</label>
+          <input type="checkbox" name="hobbies" id="hobbies" value="swimming">Swimming
+          <input type="checkbox" name="hobbies" id="hobbies" value="fishing">Fishing
+          <input type="checkbox" name="hobbies" id="hobbies" value="sunbathing">Sunbathing
+        </div>
+        <button type="submit">Submit</button>
+    
+      </form>
+</div>
+
+
+
+  
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>  
+</body>
+</html>
