@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.7;
+  color: #222222;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1, h2, h3 {
+  padding-bottom: 8px;
+  color: #666;
+}
+p {
+  margin: 10px 0;
+}
+.container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 0 0 20px;
+}
+.text-primary {
+  color: #5130aa;
+  color: #8974c5;
+}
+.lead {
+  font-size: 20px;
+}
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  color: white;
+  background: #bbbbbb;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.btn:hover {
+  background: #e1e1e1;
+  background:#c2b8dd;
+  color: #6745c5;
+}
+.btn-light {
+  background: #ffffff;
+  color: #333;
+}
+#navbar{
+  background: #333;
+  background: #8974c5;
+  overflow: auto;
+}
+#navbar a {
+  color: #fff;
+}
+#navbar .logo {
+  float: left;
+  padding-top: 8px;
+  /* border: white 1px solid; */
+}
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+#navbar li {
+  float: left;
+}
+#navbar li a {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  /* font-weight: 900; */
+  /* border: white 1px solid; */
+}
+#navbar li a:hover,
+#navbar li a.current {
+  color: rgb(233, 92, 73);
+  color: #333;
+  font-weight: 900;
+  color: #8974c5;
+  background: #eeeeee;
+  background: #c2b8dd;
+  /* background: #5f43ac */
+}
+.bg-primary {
+  background: #f2eefd;
+  background: #eeeeee;
+  /* background: #8974c5; */
+  height: 450px;
+
+}
+.bg-primary h3 {
+  color: #8974c5;
+}
+.bg-gray {
+  background: #dfd4fb;
+  height: 400px;
+  background: #eeeeee;
+  background: #ffffff;
+}
+.clr {
+  clear: both;
+}
+/* showcase */
+.showcase {
+  background: url("../img/belief-catholic-christ-1782330-1920x1080.jpg") no-repeat 10% bottom/cover;
+  height: 600px;
+}
+.showcase .showcase-content {
+  text-align: center;
+  padding-top: 60px;
+}
+.showcase .showcase-content h2 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+.showcase .showcase-content p {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+#home-info {
+  height: 450px;
+}
+#home-info .info-img {
+  float: left;
+  width: 66.7%;
+  background: url(../img/adult-black-and-white-body-of-christ-161081.jpg) no-repeat center center/cover; 
+  min-height: 100%;
+}
+#home-info .info-content {
+  float: right;
+  width: 33.3%;
+  /* height: 100%; */
+  text-align: center;
+  padding: 30px 50px;
+  overflow: hidden;
+  background: #eeeeee;
+}
+#home-info .info-content h2 {
+  text-align: center;
+}
+.box {
+  float: left;
+  width: 33.3%;
+  padding: 50px;
+}
+#main-footer {
+  text-align: center;
+  background: #8974c5;
+  color: white;
+  padding: 20px;
+}

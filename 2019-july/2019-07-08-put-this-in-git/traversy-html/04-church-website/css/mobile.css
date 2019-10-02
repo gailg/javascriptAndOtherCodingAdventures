@@ -1,0 +1,36 @@
+#navbar .logo {
+  float: none;
+  padding-top: 8px;
+  text-align: center;
+}
+#navbar ul, #navbar li {
+  float: none;
+}
+#navbar ul li a {
+  padding: 5px;
+  border-bottom: #444 dotted 1px;
+}
+.container {
+  padding: 0;
+}
+.showcase {
+  background: url("../img/belief-catholic-christ-1782330-1920x1080.jpg") no-repeat 55% bottom/cover;
+}
+#home-info {
+  height: 375px;
+}
+#home-info .info-img {
+  display: none;
+}
+#home-info .info-content {
+  float: none;
+  width: 100%;
+  height: 375px;
+}
+.box {
+  float: none;
+  width: 100%;
+}
+.bg-primary {
+  height: 350px;
+}
