@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0.75rem 0;
+}
+/*--------------------------------------------------------*/
+/*                     utility classes                    */
+/*--------------------------------------------------------*/
+.background-dark {
+  background: #333;
+  color: #f4f4f4;
+}
+.background-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.background-primary {
+  background: #93cb52;
+}
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #93cb52;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 2px;
+}
+.btn:hover
+.btn:focus {
+  background: #578128;
+}
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.large-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.list {
+  margin: .5rem 0;
+  list-style: none;
+}
+.list li {
+  padding: 0.2rem 0;
+  /* border-bottom: #444 dotted 1px; */
+}
+.medium-heading {
+  font-size: 2rem;
+}
+.padding-y-1 { padding: 1.5rem 0;}
+.padding-y-2 { padding: 2rem 0;}
+.padding-y-3 { padding: 3rem 0;}
+.padding-1 { padding: 1.5rem;}
+.padding-2 { padding: 2rem;}
+.padding-3 { padding: 3rem;}
+
+.text-primary {
+  color: #93cb52;
+}
+.text-center {
+  text-align: center;
+}
+/*--------------------------------------------------------*/
+/*                     navbar                             */
+/*--------------------------------------------------------*/
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 1rem;
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+  background: #93cb52;
+  border-radius: 2px;
+}
+
+/*--------------------------------------------------------*/
+/*                     header showcase                    */
+/*--------------------------------------------------------*/
+#showcase {
+  background: #333 url("../img/showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+}
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem;
+  /* overlay */
+  position: absolute;
+  top: 60;
+  left: 0;
+  right: 0;
+  bottom: 60;
+  background: rgba(0, 0, 0, .2);
+}
+/*--------------------------------------------------------*/
+/*                   section what we do                   */
+/*--------------------------------------------------------*/
+#what .items {
+  display: flex;
+  padding: 0;
+}
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 0 .5rem;
+}
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+#what .items .item h3 {
+  padding-top: 1rem;
+}
+/*--------------------------------------------------------*/
+/*                  section who we are                    */
+/*--------------------------------------------------------*/
+#who {
+  display: flex;
+}
+#who div {
+  flex: 1;
+}
+#who .who-img {
+  background: url("../img/people.jpg") no-repeat center center/cover;
+}
+#who h3 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+/*--------------------------------------------------------*/
+/*                    section clients                     */
+/*--------------------------------------------------------*/
+#clients .items {
+  display: flex;
+}
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+/*--------------------------------------------------------*/
+/*                         contact                        */
+/*--------------------------------------------------------*/
+#contact {
+  display: flex;
+}
+#contact .map, 
+#contact .contact-form {
+  flex: 1;
+}
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+#contact .contact-form label {
+  display: block;
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+/*--------------------------------------------------------*/
+/*                         footer                         */
+/*--------------------------------------------------------*/
+#main-footer {
+  height: 500px;
+}
