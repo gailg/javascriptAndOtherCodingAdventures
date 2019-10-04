@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2em;
+    }
+
+    /* -----------------------direct child-------------------- */
+    div > p {
+      background: #ddd;
+    }
+
+
+    /* --------------------the next sibling-------------------- */
+    div + p {
+      background: #333;
+      color: white;
+    }
+    /* ----------------------by attribute ---------------------- */
+    a[target] {
+      background: red;
+      color: white;
+      padding: .5rem 1rem;
+      text-decoration: none;
+    }
+    /* ---------------specific attribute values ---------------- */
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      margin: 5px;
+      padding: .5rem;
+    }
+
+    /* --------------------the next sibling--------------------- */
+    /* --------------------the next sibling--------------------- */
+    /* --------------------the next sibling--------------------- */
+    /* --------------------the next sibling--------------------- */
+    /* --------------------the next sibling--------------------- */
+
+    
+  </style>
+  <title>targeted selectors</title>
+</head>
+
+<body>
+  <div>
+    <p>Lorem, ipsum dolor sit amet.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>
+        <p>Item 2</p>
+      </li>
+      <li>Item 3</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <p>Lorem ipsum dolor sit amet.</p>
+
+  <a href="#">Page 1</a>
+  <a href="#" target="_self">Page 2</a>
+  <a href="http://google.com" target="_blank">Google</a>
+  <br><br>
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="submit" value="Submit">
+  </form>
+
+
+
+</body>
+
+</html>

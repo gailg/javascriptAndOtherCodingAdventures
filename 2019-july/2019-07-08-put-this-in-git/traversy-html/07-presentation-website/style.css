@@ -1,0 +1,98 @@
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: rgb(145, 78, 130);
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --animate-speed: 2s;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/*--------------------------------------------------------*/
+/*                       page colors                      */
+/*--------------------------------------------------------*/
+#page-1 {background: var(--page-1-color);}
+#page-2 {background: var(--page-2-color);}
+#page-3 {background: var(--page-3-color);}
+#page-4 {background: var(--page-4-color);}
+/*--------------------------------------------------------*/
+/*                           page                         */
+/*--------------------------------------------------------*/
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+.page p {
+  font-size: 1.3rem;
+}
+.btn {
+  display: inline-block;
+  /* justify-content: center; */
+  padding: .8rem 1rem;
+  background: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 1s ease-in-out;
+  border-radius: 50%;
+}
+.btn span {
+  margin-right: 1rem;
+}
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+/*--------------------------------------------------------*/
+/*                   page 1 animation                     */
+/*--------------------------------------------------------*/
+#page-1 h1 {
+  transform: translateY(-100vh);
+  animation: heading var(--animate-speed) forwards cubic-bezier(0, 0, 0, 1);
+}
+@keyframes heading {
+  to{
+    transform: translateY(0);
+  }
+}
+#page-1 p {
+  opacity: 0;
+  animation: paragraph 1s 1s forwards ease-in;
+}
+@keyframes paragraph {
+  to {
+    opacity: 1;
+  }
+}
+#page-1 .btn {
+  transform: translateY(100vh);
+  animation: button 1s 1s forwards cubic-bezier(0, 0, 0, 1);
+}
+@keyframes button {
+  to{
+    transform: translateY(0);
+  }
+}

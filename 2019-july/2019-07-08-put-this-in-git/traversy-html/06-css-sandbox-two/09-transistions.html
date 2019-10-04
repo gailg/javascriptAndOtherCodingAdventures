@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+  <title>transitions</title>
+  <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: white;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(1, 0, 0, 1);
+        /* transition: all 1s ease-in-out; */
+      }
+      .box:hover {
+        /* background: red; */
+        height: 150px;
+        width: 150px;
+        /* border-radius: 50%; */
+      }
+
+    </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

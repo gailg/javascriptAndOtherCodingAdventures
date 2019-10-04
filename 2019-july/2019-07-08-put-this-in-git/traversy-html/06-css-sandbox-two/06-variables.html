@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+  <title>css variables</title>
+  <style>
+    :root {
+      --max-width: 800px;
+      --light-gray: #f4f4f4;
+      --primary-color: #642291;
+      --secondary-color: #d1e948;
+
+    }
+    .box {
+      --box-1-width: 1;
+      --box-2-width: 3;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.4;
+    }
+    header {
+      background: var(--primary-color);
+      border-bottom: 20px var(--secondary-color) solid;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      /* background: var(--light-gray); */
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+    .box {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      margin: 1rem;
+    }
+    .box-1 { flex: var(--box-1-width); }
+    .box-2 { flex: var(--box-2-width); }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>css variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam harum incidunt animi, magni repellat
+        perferendis sed iure adipisci similique deserunt.</p>
+    </div>
+
+    <div class="box box-2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam harum incidunt animi, magni repellat
+        perferendis sed iure adipisci similique deserunt.</p>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
