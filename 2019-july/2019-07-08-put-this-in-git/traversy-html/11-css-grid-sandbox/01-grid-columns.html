@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+  <title>grid columns</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      font-family: 'Roboto', sans-serif;
+
+    }
+    .grid {
+      display: grid;
+      /* grid-template-columns: 200px auto 200px; */
+      /* grid-template-columns: repeat(3, auto); */
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-gap: 1rem;
+    }
+
+    .item {
+      padding: 3rem;
+      background: #efefef;
+      border: #aaaaaa 1px solid;
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-align: center;
+      /* margin: 1rem; */
+    }
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 1.5rem;
+    }
+    h3, p {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+  <main>
+    <section>
+      <h3>Welcome to my site</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, illum tempore rem aut pariatur soluta iusto debitis accusamus illo harum architecto, distinctio sed molestiae eum omnis magnam. Possimus est magni quo aliquam enim fugit architecto repudiandae vero molestiae, odio modi libero suscipit.</p>
+    </section>
+    <aside>
+      <h3>Hello</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa mollitia praesentium, expedita deleniti fuga quaerat.</p>
+    </aside>
+  </main>
+
+
+
+</body>
+
+</html>
