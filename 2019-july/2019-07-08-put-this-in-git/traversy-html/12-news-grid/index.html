@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" media="screen and (max-width: 768px)" href="/css/mobile.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
   <!-- https://tools.dynamicdrive.com/favicon/ -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <script src="https://kit.fontawesome.com/0c5ba6d98e.js"></script>
@@ -16,6 +17,9 @@
 </head>
 
 <body>
+  <!-- -------------------------------------------------------- -->
+  <!--                          navbar                          -->
+  <!-- -------------------------------------------------------- -->
   <nav id="main-nav">
     <div class="container">
       <img class="logo" src="img/logo.png" alt="NewsGrid">
@@ -28,13 +32,153 @@
       <ul>
         <li><a href="index.html" class="current">Home</a></li>
         <li><a href="about.html">About</a></li>
-
       </ul>
-
     </div>
   </nav>
-
-
+  <!-- -------------------------------------------------------- -->
+  <!--                         showcase                         -->
+  <!-- -------------------------------------------------------- -->
+  <header id="showcase">
+    <div class="container">
+      <div class="showcase-container">
+        <div class="showcase-content">
+          <div class="category category-sports">Sports</div>
+          <h1>Some Sports Article</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab commodi provident nemo sapiente ratione
+            nesciunt recusandae nulla aliquid vitae, soluta voluptates quod. Iure illo nulla distinctio quo suscipit,
+            vel, voluptas odit excepturi labore et quia architecto. Odit sint totam explicabo obcaecati libero!</p>
+          <a href="article.html" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------------------------------------------------------- -->
+  <!--                         articles                         -->
+  <!-- -------------------------------------------------------- -->
+  <section id="home-articles" class="padding-y-2">
+    <div class="container">
+      <h2>Editor Picks</h2>
+      <div class="articles-container">
+        <!-- entertainment article with picture -->
+        <article class="card">
+          <img src="img/articles/ent1.jpg" alt="">
+          <div>
+            <div class="category category-ent">Entertainment</div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+              minus impedit obcaecati rerum pariatur enim?</p>
+          </div>
+        </article>
+        <!-- sports article without picture -->
+        <article class="card bg-dark">
+          <div class="category category-sports">Sports</div>
+          <h3>
+            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+          </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+            minus impedit obcaecati rerum pariatur enim?</p>
+        </article>
+        <!-- tech article with picture -->
+        <article class="card">
+          <img src="img/articles/tech1.jpg" alt="">
+          <div>
+            <div class="category category-tech">Technology</div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+              minus impedit obcaecati rerum pariatur enim?</p>
+          </div>
+        </article>
+        <!-- sports article with picture -->
+        <article class="card">
+          <div>
+            <div class="category category-sports">Sports</div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+              minus impedit obcaecati rerum pariatur enim?</p>
+          </div>
+          <img src="img/articles/sports1.jpg" alt="">
+        </article>
+        <!-- tech article with picture -->
+        <article class="card">
+          <img src="img/articles/tech2.jpg" alt="">
+          <div>
+            <div class="category category-tech">Technology</div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+              minus impedit obcaecati rerum pariatur enim?</p>
+          </div>
+        </article>
+        <!-- sports article without picture -->
+        <article class="card bg-primary">
+          <div class="category category-sports">Sports</div>
+          <h3>
+            <a href="article.html">Lorem ipsum dolor sit amet.</a>
+          </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+            minus impedit obcaecati rerum pariatur enim?</p>
+        </article>
+        <!-- entertainment article with picture -->
+        <article class="card">
+          <div>
+            <div class="category category-ent">Entertainment</div>
+            <h3>
+              <a href="article.html">Lorem ipsum dolor sit amet.</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolor dolorem voluptates odio corrupti,
+              minus impedit obcaecati rerum pariatur enim?</p>
+          </div>
+          <img src="img/articles/ent2.jpg" alt="">
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- -------------------------------------------------------- -->
+  <!--                          footer                          -->
+  <!-- -------------------------------------------------------- -->
+  <footer id="main-footer" class="padding-y-2">
+    <div class="container footer-container">
+      <div>
+        <img src="img/logo_light.png" alt="NewsGrid">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, veniam aperiam tempore aut voluptates earum, iste sit odit ducimus quas dolor. Aperiam ab perspiciatis deleniti esse totam doloribus quos itaque?</p>
+      </div>
+      <div>
+        <h3>Email Newsletter</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <form>
+          <input type="email" placeholder="Enter Email...">
+          <input class="btn btn-primary" type="submit" value="Subscribe">
+        </form>
+      </div>
+      <div>
+        <h3>Site links</h3>
+        <ul class="list">
+          <li><a href="#">Help and Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Join Our Club</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, fuga.</p>
+        <a href="#" class="btn btn-primary">Join Now</a>
+      </div>
+      <div class="larry">
+        <p>Copyright &copy; NewsGrid 2019, All Rights Reserved</p>
+        <!-- <p>Larry says hello Monty says hello Charles says hello 
+          Sangea says hello; -->
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
