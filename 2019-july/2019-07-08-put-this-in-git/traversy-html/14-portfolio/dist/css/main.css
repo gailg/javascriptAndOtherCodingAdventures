@@ -502,6 +502,10 @@ img {
     #header-home .header-content {
       padding-top: 5rem; } }
 
+@media (max-width: 568px) {
+  #header-home .header-content h1 {
+    font-size: 3rem; } }
+
 /*--------------------------------------------------------*/
 /*                     Smartphones                        */
 /*--------------------------------------------------------*/
@@ -510,7 +514,7 @@ img {
     flex-direction: column;
     align-items: center; }
     #main-nav li {
-      padding: 1rem; }
+      padding: .7rem; }
   #header-home {
     height: 9rem;
     border-bottom: 3px solid #ffbc00;
@@ -525,6 +529,7 @@ img {
   #home-b .stats,
   #home-c .process,
   #about-d .testimonials,
+  #contact-b .contact-info,
   .items {
     grid-template-columns: 1fr; }
   #home-a .specials div {
@@ -535,10 +540,32 @@ img {
       padding-bottom: 0; }
   #home-b .stats div {
     padding: 2rem 0 1rem 0; }
+  #about-a .about-info {
+    grid-template-areas: "bio-image" "bio" "award-1" "award-2" "award-3"; }
+  #about-c {
+    display: none; }
+  #contact-a .text-fields {
+    grid-template-areas: "name" "email" "subject" "phone" "message"; }
+  #contact-b .container .contact-info div {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px #f4f4f4 solid; }
+    #contact-b .container .contact-info div:last-child {
+      border: none;
+      padding-bottom: 0; }
+  #contact-c h1 {
+    font-size: 1.8rem; }
   #main-footer {
     height: 8rem;
     padding: 1rem 0;
-    font-size: .8em; }
+    font-size: .75em; }
     #main-footer .footer-content {
       flex-direction: column;
       padding: 1rem; } }
+
+/*--------------------------------------------------------*/
+/*                      landscape                         */
+/*--------------------------------------------------------*/
+@media (max-height: 580px) {
+  #header-home .header-content {
+    padding-top: 2rem; } }
