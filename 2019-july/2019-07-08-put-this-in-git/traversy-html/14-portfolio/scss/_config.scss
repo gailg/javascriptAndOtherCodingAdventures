@@ -1,0 +1,20 @@
+/*--------------------------------------------------------*/
+/*                        variables                       */
+/*--------------------------------------------------------*/
+$website-width: 1000px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url("../img/showcase.jpg");
+$bg-image: url("../img/2015-05-04-iphone-05744d.jpg");
+/*--------------------------------------------------------*/
+/*                     set text color                     */
+/*--------------------------------------------------------*/
+@function set-text-color($background) {
+  @if(lightness($background) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

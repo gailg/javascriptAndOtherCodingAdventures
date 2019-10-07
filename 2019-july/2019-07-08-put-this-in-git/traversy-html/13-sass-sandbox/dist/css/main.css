@@ -1,0 +1,60 @@
+/*--------------------------------------------------------*/
+/*                    set text color                      */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                   transform mixin                      */
+/*--------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #f4f4f4;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5; }
+
+header {
+  background: #333;
+  color: #ededed;
+  padding: 1rem; }
+  header h1 {
+    text-align: center; }
+
+.section {
+  padding: 3rem; }
+  .section h3 {
+    font-size: 2rem; }
+  .section-a {
+    background: steelblue;
+    color: #ededed; }
+  .section-b {
+    background: skyblue;
+    color: #232323; }
+
+.btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem; }
+
+.btn-light {
+  background: #f4f4f4;
+  color: #232323; }
+  .btn-light:hover {
+    --webkit-transform: $property;
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #c1c1c1; }
+
+.btn-dark {
+  background-color: #333;
+  color: #ededed; }
+  .btn-dark:hover {
+    --webkit-transform: $property;
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #666666; }

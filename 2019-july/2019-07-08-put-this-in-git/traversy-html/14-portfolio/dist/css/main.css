@@ -1,0 +1,304 @@
+/*--------------------------------------------------------*/
+/*                        variables                       */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                     set text color                     */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                        container                       */
+/*--------------------------------------------------------*/
+.container {
+  max-width: 1000px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+/*--------------------------------------------------------*/
+/*                         buttons                        */
+/*--------------------------------------------------------*/
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer; }
+
+.btn-main {
+  color: #333;
+  background-color: #ffbc00; }
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333; }
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #ffbc00; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+/*--------------------------------------------------------*/
+/*                         padding                        */
+/*--------------------------------------------------------*/
+.padding-y-1 {
+  padding: 1rem 0; }
+
+.padding-y-2 {
+  padding: 2rem 0; }
+
+.padding-y-3 {
+  padding: 3rem 0; }
+
+.padding-y-4 {
+  padding: 4rem 0; }
+
+.padding-1 {
+  padding: 1rem; }
+
+.padding-2 {
+  padding: 2rem; }
+
+.padding-3 {
+  padding: 3rem; }
+
+.padding-4 {
+  padding: 4rem; }
+
+/*--------------------------------------------------------*/
+/*                         margin                        */
+/*--------------------------------------------------------*/
+.margin-y-1 {
+  margin: 1rem 0; }
+
+.margin-y-2 {
+  margin: 2rem 0; }
+
+.margin-y-3 {
+  margin: 3rem 0; }
+
+.margin-y-4 {
+  margin: 4rem 0; }
+
+/*--------------------------------------------------------*/
+/*                      section-title                     */
+/*--------------------------------------------------------*/
+.section-title {
+  font-family: 'Zilla Slab', serif;
+  font-size: 4rem;
+  font-weight: 300;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  text-transform: none; }
+
+/*--------------------------------------------------------*/
+/*                       bottom line                      */
+/*--------------------------------------------------------*/
+.bottom-line {
+  height: 4px;
+  width: 8rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0rem auto 1rem auto; }
+
+/*--------------------------------------------------------*/
+/*                         buttons                        */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                         buttons                        */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                         buttons                        */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                     general styles                     */
+/*--------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background: #fff; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+h2, h3, h4 {
+  text-transform: uppercase; }
+
+img {
+  width: 100%; }
+
+/*--------------------------------------------------------*/
+/*                          logo                          */
+/*--------------------------------------------------------*/
+#logo {
+  font-family: 'Zilla Slab', serif;
+  color: #ffbc00;
+  text-transform: none;
+  font-size: 2rem;
+  font-weight: 300; }
+  #logo .gong {
+    color: #fff; }
+
+/*--------------------------------------------------------*/
+/*                         main nav                       */
+/*--------------------------------------------------------*/
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem; }
+  #main-nav ul {
+    display: flex; }
+  #main-nav li {
+    padding: 1rem 1.5rem; }
+  #main-nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s; }
+    #main-nav a:hover {
+      border-color: #ffbc00; }
+    #main-nav a.current {
+      border-color: #ffbc00; }
+
+/*--------------------------------------------------------*/
+/*                         header                         */
+/*--------------------------------------------------------*/
+.typewriter {
+  font-family: 'Special Elite', cursive; }
+
+#header-home {
+  background: url("../img/2015-05-04-iphone-05744d.jpg") no-repeat center right/cover;
+  height: 100vh;
+  color: #fff; }
+  #header-home .header-content {
+    padding-top: 20%; }
+    #header-home .header-content h1 {
+      font-family: 'Zilla Slab', serif;
+      font-weight: 300;
+      font-size: 4rem;
+      line-height: 1.2; }
+
+/*--------------------------------------------------------*/
+/*                         cursor                         */
+/*--------------------------------------------------------*/
+.text-type > .text {
+  border-right: 0.2rem solid rgba(255, 255, 255, 0.6); }
+
+/*--------------------------------------------------------*/
+/*                     home sections                      */
+/*--------------------------------------------------------*/
+#home-a .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-a .specials .fas {
+    color: #ffbc00;
+    padding-bottom: 1rem; }
+  #home-a .specials h3 {
+    padding-bottom: .5rem; }
+
+#home-b .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-b .stats li {
+    line-height: 2; }
+    #home-b .stats li.stats-title {
+      font-size: 1.5rem; }
+    #home-b .stats li.stats-number {
+      font-size: 2rem;
+      font-weight: bold; }
+  #home-b .stats div {
+    padding: 2rem 0; }
+    #home-b .stats div:nth-child(odd) {
+      background: #f4f4f4; }
+    #home-b .stats div:nth-child(even) {
+      background: #ccc; }
+
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center; }
+  #home-c .process-icon {
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+    transition: all 1s; }
+    #home-c .process-icon:hover {
+      background: #ffbc00;
+      width: 90px;
+      height: 90px;
+      line-height: 90px; }
+      #home-c .process-icon:hover .process-step {
+        background: #333; }
+  #home-c .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    background: #ffbc00;
+    color: #fff;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1rem;
+    transition: all 1s; }
+
+/*--------------------------------------------------------*/
+/*                         footer                         */
+/*--------------------------------------------------------*/
+#main-footer {
+  background: #333;
+  color: #fff;
+  height: 5rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem; }
+  #main-footer .social .fab {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.5rem; }
+    #main-footer .social .fab:hover {
+      background: #ffbc00; }
+
+/*--------------------------------------------------------*/
+/*                     general styles                     */
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*                     general styles                     */
+/*--------------------------------------------------------*/
