@@ -1,0 +1,17 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+ul {
+  list-style-type: none;
+  /* max-width: 200px;
+  padding: 8px;
+  margin: auto;
+  background: #eee;
+  border: 1px dotted #ddd; */
+}
+ul li {
+  padding: 8px;
+  margin: 8px;
+  background: #eee;
+  border: 1px black solid;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js dom</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <!-- -------------------------------------------------------- -->
+    <!--                          banner                          -->
+    <!-- -------------------------------------------------------- -->
+    <header>
+      <div id="page-banner">
+        <h1 class="title">Bookorama</h1>
+        <p>Books for Ninjas</p>
+        <a href="https://www.thenetninja.co.uk/">the net ninja</a>
+        <form id="search-books">
+          <input type="text" placeholder="search books...">
+        </form>
+      </div>
+    </header>
+    <!-- -------------------------------------------------------- -->
+    <!--                        book list                         -->
+    <!-- -------------------------------------------------------- -->
+    <div id="book-list">
+      <h2 class="title">Books to read</h2>
+      <ul>
+        <li>
+          <span class="name">The Grapes of Wrath</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">Gone with the Wind</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">Little Women</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">And Then There Were None</span>
+          <span class="delete">delete</span>
+        </li>
+      </ul>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <!--                         add books                        -->
+    <!-- -------------------------------------------------------- -->
+    <form id="add-book">
+      <input type="text" placeholder="add a book...">
+    </form>
+    <!-- -------------------------------------------------------- -->
+    <!--                          header                          -->
+    <!-- -------------------------------------------------------- -->
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

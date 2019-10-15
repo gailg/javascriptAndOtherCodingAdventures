@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bookorama</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- -------------------------------------------------------- -->
+    <!--                          banner                          -->
+    <!-- -------------------------------------------------------- -->
+    <header>
+      <div id="page-banner">
+        <h1 class="title">Bookorama</h1>
+        <p>Books for Ninjas</p>
+        <!-- <a href="https://www.thenetninja.co.uk/">the net ninja</a> -->
+        <form id="search-books">
+          <input type="text" placeholder="search books...">
+        </form>
+      </div>
+    </header>
+    <!-- -------------------------------------------------------- -->
+    <!--                        book list                         -->
+    <!-- -------------------------------------------------------- -->
+    <div id="book-list">
+      <h2 class="title">Books to read</h2>
+      <ul>
+        <li>
+          <span class="name">The Grapes of Wrath</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">Gone with the Wind</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">Little Women</span>
+          <span class="delete">delete</span>
+        </li>
+
+        <li>
+          <span class="name">And Then There Were None</span>
+          <span class="delete">delete</span>
+        </li>
+      </ul>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <!--                         add book                         -->
+    <!-- -------------------------------------------------------- -->
+    <form id="add-book">
+      <input type="checkbox" id="hide">
+      <label for="hide">Hide all books</label>
+      <input type="text" placeholder="add a book...">
+      <button>Add</button>
+    </form>
+    <!-- -------------------------------------------------------- -->
+    <!--                      tabbed content                      -->
+    <!-- -------------------------------------------------------- -->
+    <div id="tabbed-content">
+      <ul class="tabs">
+        <li class="active" data-target="#about">About</li>
+        <li data-target="#contact">Contact</li>
+      </ul>
+      <div class="panel active" id="about">
+        <p>Content for about tab...</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus deleniti, dolorem rerum optio rem, aspernatur alias, adipisci nemo repudiandae vitae sapiente. Consequatur, cumque! Quis.</p>
+      </div>
+      <div class="panel" id="contact">
+        <p>Content for contact tab...</p>
+        <p>Ducimus deleniti, dolorem rerum optio rem, aspernatur alias, adipisci nemo repudiandae vitae sapiente. Consequatur, cumque! Quis.</p>
+      </div>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <!--                           end                            -->
+    <!-- -------------------------------------------------------- -->
+  </div>
+  
+</body>
+</html>
